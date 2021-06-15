@@ -45,6 +45,13 @@ class basicUser : public User{
 	bool wypozycz(Book& b);
 };
 
+class superUser : public User{
+	public:
+	superUser();
+	superUser(string n);
+	bool wypozycz(Book& b);
+};
+
 
 	User* findUserById(int id);
 	Book& findBookById(int id);
