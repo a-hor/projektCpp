@@ -6,7 +6,7 @@ int main(){
 	string s0,s1;
 	do{
 		std::cout<<"Wybierz działanie:\n";
-		std::cout<<"0. Zakończ program\n1. Wypożycz (podaj id ksiazki i id uzytkownika) \n2. Oddaj (podaj id ksiazki i id uzytkownika)\n3. Dodaj książkę (podaj tytul i autora)\n4. Dodaj zwyklego użytkownika (podaj nazwe)\n5. Pokaz ksiazki uzytkownika (podaj id)\n";
+		std::cout<<"0. Zakończ program\n1. Wypożycz (podaj id ksiazki i id uzytkownika) \n2. Oddaj (podaj id ksiazki i id uzytkownika)\n3. Dodaj książkę (podaj tytul i autora)\n4. Dodaj zwyklego użytkownika (podaj nazwe)\n5. Pokaz ksiazki uzytkownika (podaj id)\n6. Dodaj nielimitowanego uzytkownika\n";
 		std::cin>>w;
 		switch(w){
 			case 0:{ q=false;break;}
@@ -32,6 +32,12 @@ int main(){
 				cin>>id0;
 				findUserById(id0)->showCurrentBooks();
 			break;}
+			case 6: {
+				cin>>s0;
+				superUser su(s0);
+				getUsers()->push_back(move(&su));
+				break;
+			}
 		}
 
 	}while(q);
