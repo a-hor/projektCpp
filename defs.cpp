@@ -91,6 +91,22 @@ bool removeFrom(const T& m, vector<T>& v){
 		return true;
 	}
 
+	superUser::superUser(){
+		id=nextId();
+		name="";
+		cout<<"Unlimited user created: "<<id<<"\n";
+	}
+	superUser::superUser(string n){
+		id=nextId();
+		name=n;
+		cout<<"Unlimited user created: "<<id<<" "<<name<<"\n";
+	}
+	bool superUser::wypozycz(Book& b){
+		currentBooks.push_back(b);
+		return true;
+	}
+
+
 
 	User* findUserById(int id){
 		for(int j=-1;++j<users.size();){
