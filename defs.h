@@ -29,7 +29,7 @@ class User{
 	string name;
 	public:
 	vector<Book>currentBooks;
-	virtual bool wypozycz(Book& b){return true;}
+	virtual bool wypozycz(Book& b) = 0;
 	bool oddaj(int bookId);
 	bool operator==(const User& u);
 	void showCurrentBooks();
